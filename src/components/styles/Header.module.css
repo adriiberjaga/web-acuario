@@ -1,0 +1,142 @@
+.main {
+    display: flex;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    height: 100px; 
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.mainContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+    height: 100%;
+}
+
+.mainContentLeft {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.mainContentLeftText {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+.mainContentLeftText span {
+    color: #333;
+    font-weight: 600;
+}
+.mainContentmidimg{
+width: 80px;
+}
+.mainContentRigth {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.mainContentRigthBtnLog,
+.mainContentRigthBtnCart {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 8px 16px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    border-radius: 4px;
+}
+
+.mainContentRigthBtnLog:hover,
+.mainContentRigthBtnCart:hover {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.mainContentRigthBtnCart {
+    position: relative;
+}
+
+.menuButton {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -280px; 
+    width: 280px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebarOpen {
+    left: 0;
+}
+
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.sidebarContent {
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.mainContentRigthInfo{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 150px;
+    padding-left: 20px;
+    gap: 10px;
+}
+.mainContentRigthText{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .menuButton {
+        display: block;
+    }
+
+    .mainContentLeft,
+    .mainContentRigth {
+        display: none;
+    }
+
+    .sidebarContent .mainContentLeftText,
+    .sidebarContent .mainContentRigthBtnLog,
+    .sidebarContent .mainContentRigthBtnCart {
+        width: 100%;
+        text-align: left;
+        padding: 10px 0;
+    }
+}
