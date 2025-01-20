@@ -19,13 +19,29 @@
     padding: 0 10px;
     height: 100%;
 }
-
-.mainContentLeft {
+.navlink{
+    color: rgb(26, 26, 26);
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.active {
+    color: black;
+    font-weight: 700;
+}
+  
+  
+.mainContentLeft,
+.mainContentLeftSide {
     display: flex;
     align-items: center;
     gap: 20px;
 }
-
+.mainContentLeftSide{
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+}
 .mainContentLeftText {
     font-size: 14px;
     color: #666;
@@ -44,9 +60,11 @@ width: 80px;
     gap: 20px;
     align-items: center;
 }
-
+.mainContentLeftSideBtns{
+}
 .mainContentRigthBtnLog,
-.mainContentRigthBtnCart {
+.mainContentRigthBtnCart,
+.mainContentRigthBtnReg {
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -85,6 +103,7 @@ width: 80px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     transition: left 0.3s ease;
     z-index: 1000;
+    transition: 300ms;
 }
 
 .sidebarOpen {
@@ -134,7 +153,8 @@ width: 80px;
 
     .sidebarContent .mainContentLeftText,
     .sidebarContent .mainContentRigthBtnLog,
-    .sidebarContent .mainContentRigthBtnCart {
+    .sidebarContent .mainContentRigthBtnCart,
+    .mainContentRigthBtnReg {
         width: 100%;
         text-align: left;
         padding: 10px 0;
